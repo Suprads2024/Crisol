@@ -1,0 +1,143 @@
+/*--------------------
+     Team
+---------------------*/
+.member {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    @include prefix(transition, all .3s linear, webkit moz ms o);
+
+    .member-img {
+        position: relative;
+        z-index: 2;
+        @include prefix(transition, all .3s ease, webkit moz ms o);
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .member-info {
+        position: relative;
+        padding: 28px 20px;
+        background-color: var(--color-white);
+        @include prefix(transition, all .3s ease, webkit moz ms o);
+
+        .member-name {
+            font-size: 20px;
+            margin-bottom: 7px;
+            @include prefix(transition, all .3s ease, webkit moz ms o);
+        }
+
+        .member-desc {
+            font-size: 15px;
+            margin-bottom: 0;
+            @include prefix(transition, all .3s ease, webkit moz ms o);
+        }
+    }
+
+    .social-icons {
+        @include prefix(transition, all .3s ease, webkit moz ms o);
+
+        li {
+            margin-right: 3px;
+            @include prefix(transition, all .3s ease, webkit moz ms o);
+
+            a {
+                width: 38px;
+                height: 38px;
+                box-shadow: none;
+                border-radius: 50%;
+                background-color: var(--color-primary);
+
+                .social-icon {
+                    color: var(--color-white);
+                }
+
+                &:hover {
+                    background-color: var(--color-secondary);
+                }
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.team-layout1 {
+    .member {
+        box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.11);
+
+        .member-info {
+            padding: 40px;
+        }
+
+        .social-icons {
+            li {
+                opacity: 0;
+
+            }
+        }
+
+        &:hover {
+            .social-icons li {
+                opacity: 1;
+
+                &:nth-of-type(2) {
+                    transition-delay: .2s;
+                }
+
+                &:nth-of-type(3) {
+                    transition-delay: .4s;
+                }
+
+                &:nth-of-type(4) {
+                    transition-delay: .6s;
+                }
+            }
+        }
+    }
+}
+
+.team-layout2 {
+    .member {
+        .social-icons {
+            opacity: 0;
+            margin-top: -58px;
+            margin-bottom: 15px;
+        }
+
+        &:hover {
+            box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.11);
+
+            .member-img {
+                @include prefix(transform, translateY(-58px), webkit moz ms o);
+            }
+
+            .social-icons {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .member {
+        max-width: 450px;
+        margin: 0 auto 30px;
+
+        .member-info {
+            padding: 15px !important;
+
+            .member-name {
+                font-size: 15px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

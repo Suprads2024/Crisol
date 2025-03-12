@@ -1,0 +1,230 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer {
+    overflow-x: hidden;
+
+    .footer-primary {
+        position: relative;
+        padding: 123px 0 100px;
+        background-color: #011d59;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 377px;
+            z-index: 1;
+            background-image: url(../images/backgrounds/pattern.png);
+            background-position: bottom right;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .footer-secondary {
+        position: relative;
+        padding: 46px 0;
+        background-color: var(--color-white);
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            right: 50px;
+            height: 5px;
+            background-color: var(--color-primary);
+        }
+    }
+
+    [class*="footer-widget"] {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+
+    .footer-widget-title {
+        color: var(--color-white);
+        font-size: 17px;
+        text-transform: capitalize;
+        margin-bottom: 33px;
+    }
+
+    .contact-list li {
+        margin-bottom: 17px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            font-family: var(--font-primary);
+            font-size: 17px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            color: var(--color-primary);
+
+            .contact-icon {
+                margin-right: 15px;
+            }
+
+            &:hover {
+                color: var(--color-white);
+            }
+        }
+
+        p {
+            margin-bottom: 7px;
+        }
+    }
+
+    .footer-widget-contact p {
+        color: var(--color-gray-100);
+    }
+
+    .footer-widget-nav li a {
+        display: block;
+        position: relative;
+        color: var(--color-white);
+        font-size: 14px;
+        margin-bottom: 11px;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    .footer-copyright-links li {
+        a {
+            position: relative;
+            color: var(--color-secondary);
+            display: block;
+            margin-right: 25px;
+            padding: 3px 0;
+
+            &:before {
+                content: '-';
+                position: absolute;
+                top: 50%;
+                right: -13px;
+                transform: translateY(-50%);
+                color: var(--color-secondary);
+            }
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+
+        &:last-child a {
+            margin-right: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .social-icons {
+        li {
+            margin-right: 30px;
+
+            a {
+                width: auto;
+                height: auto;
+                box-shadow: none;
+
+                i {
+                    font-size: 17px;
+                }
+
+                .social-title {
+                    font-weight: 700;
+                    color: var(--bs-gray);
+                    margin-left: 10px;
+                    @include prefix(transition, all 0.4s linear, webkit moz o);
+                }
+
+                &:hover {
+                    background-color: transparent;
+
+                    i {
+                        color: var(--color-primary);
+                    }
+
+                    .social-title {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    color: var(--color-primary);
+    @include prefix(transition, all 0.4s linear, webkit moz o);
+
+    .btn-text {
+        font-weight: 700;
+    }
+
+    &:hover {
+        color: var(--color-secondary);
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (min-width: 320px) and (max-width: 1200px) {
+    .footer {
+        .footer-primary {
+            padding-top: 35px;
+            padding-bottom: 30px;
+        }
+
+        .footer-secondary {
+            padding: 20px 0;
+
+            &:after {
+                left: 20px;
+                right: 20px;
+                height: 3px;
+            }
+        }
+
+        .footer-widget {
+            margin-bottom: 20px;
+        }
+
+        .footer-widget-title {
+            margin-bottom: 15px;
+        }
+
+        .footer-widget-nav li a {
+            font-size: 13px;
+        }
+
+        .phone-number {
+            margin: 10px 0;
+        }
+    }
+}
+
+/* Mobile Phones */
+@include xs-sm-screens {
+    .footer .social-icons {
+        margin: 10px 0;
+
+        li:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}

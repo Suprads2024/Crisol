@@ -1,0 +1,117 @@
+/*----------------------
+    Carousel
+-----------------------*/
+.slick-list {
+    margin: 0 -10px;
+}
+
+.slick-slide {
+    margin: 0 10px;
+}
+
+.m-slides-0 {
+    .slick-list {
+        margin: 0;
+    }
+
+    .slick-slide {
+        margin: 0;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+    border-radius: 50%;
+    @include prefix(transition, all 0.3s linear, webkit moz ms o);
+    @include prefix(transform, translateY(-50%), webkit moz ms o);
+
+    &:before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'icomoon';
+        font-size: 16px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        @include prefix(transition, all 0.3s linear, webkit moz ms o);
+    }
+
+    &:hover {
+        box-shadow: 0 0 0 2px #dfdfea inset;
+
+        &:before {
+            background-color: var(--color-secondary);
+        }
+    }
+
+    &.slick-next {
+        right: 0;
+
+        &:before {
+            content: "\e94a";
+        }
+    }
+
+    &.slick-prev {
+        left: 0;
+
+        &:before {
+            content: "\e940";
+        }
+    }
+}
+
+.slick-dots {
+    list-style: none;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 0;
+
+    li {
+        display: inline-flex;
+        position: relative;
+        width: 20px;
+        height: 8px;
+        margin: 0 4px;
+        @include prefix(transition, all 0.3s linear, webkit moz ms o);
+
+        button {
+            display: block;
+            font-size: 0;
+            width: 20px;
+            height: 8px;
+            padding: 0;
+            border-radius: 3px;
+            background-color: var(--color-secondary);
+            @include prefix(transition, all 0.2s linear, webkit moz ms o);
+        }
+
+        &.slick-active {
+            width: 40px;
+
+            button {
+                width: 40px;
+                background-color: var(--color-primary);
+            }
+        }
+    }
+}
+
+.carousel-dots-light .slick-dots li:not(.slick-active) {
+    button {
+        background-color: var(--color-white);
+    }
+}

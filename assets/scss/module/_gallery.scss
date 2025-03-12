@@ -1,0 +1,55 @@
+/*-------------------------
+   gallery
+-------------------------*/
+.gallery-img {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    @include prefix(transition, all .3s ease, webkit moz ms o);
+
+    img {
+        border-radius: 10px;
+    }
+
+    &:hover {
+        @include prefix(transform, scale(1.1), webkit moz ms o);
+    }
+}
+
+.gallery {
+    .slick-list {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .slick-slide {
+        margin: 0;
+    }
+
+    .slick-arrow {
+        &.slick-next {
+            right: -50px;
+        }
+
+        &.slick-prev {
+            left: -50px;
+        }
+    }
+}
+
+@include xs-screens {
+    .gallery {
+
+        .slick-arrow {
+            &.slick-next {
+                right: 0;
+            }
+
+            &.slick-prev {
+                left: 0;
+            }
+        }
+    }
+}

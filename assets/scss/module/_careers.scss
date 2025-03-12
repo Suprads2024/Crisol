@@ -1,0 +1,102 @@
+/*-----------------------
+    careers
+------------------------*/
+.careers {
+    overflow-x: hidden;
+
+    .slick-slide {
+        margin: 15px;
+        transition: opacity .3s ease, visibility .3s ease, box-shadow 0.4s ease, transform 0.5s ease;
+    }
+
+    .slick-slide:not(.slick-active) {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .slick-list {
+        margin: -15px;
+        overflow: visible;
+    }
+
+    .slick-dots {
+        margin-top: 15px;
+    }
+}
+
+.job-item {
+    padding: 40px;
+    border-radius: 5px;
+    background-color: var(--color-white);
+    box-shadow: 0px 5px 83px 0px rgba(13, 14, 67, 0.12);
+    @include prefix(transition, all 0.4s ease, webkit moz ms o);
+
+    &:hover {
+        @include prefix(transform, translateY(-6px), webkit moz ms o);
+    }
+
+    .job-meta {
+        margin-bottom: 32px;
+    }
+
+    .job-type {
+        font-size: 13px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+        text-transform: capitalize;
+        color: var(--color-white);
+        background-color: var(--color-primary);
+    }
+
+    .job-location {
+        font-size: 13px;
+        color: var(--color-secondary);
+    }
+
+    .job-title {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .btn {
+        margin-top: 10px;
+
+        .plus-icon {
+            background-color: var(--color-secondary);
+        }
+
+        &:hover {
+            .plus-icon {
+                background-color: var(--color-primary);
+            }
+        }
+    }
+}
+
+@media (min-width:1400px) {
+    .careers {
+        .slick-list {
+            margin: -20px;
+        }
+
+        .slick-slide {
+            margin: 20px;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .job-item {
+        padding: 20px;
+
+        .job-meta {
+            margin-bottom: 20px;
+        }
+
+        .job-title {
+            margin-bottom: 10px;
+        }
+    }
+}

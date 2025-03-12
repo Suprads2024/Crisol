@@ -1,0 +1,50 @@
+/*------------------------
+    Animations
+-----------------------*/
+@include keyframes(ripple) {
+    70% {
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0)
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0)
+    }
+}
+
+@include keyframes(spinner) {
+    0% {
+        @include prefix(transform, rotate(0deg), webkit moz ms o);
+    }
+
+    100% {
+        @include prefix(transform, rotate(360deg), webkit moz ms o);
+    }
+}
+
+@include keyframes(slideTopDown) {
+    0% {
+        @include prefix(transform, translateY(0), webkit moz ms o);
+    }
+
+    100% {
+        @include prefix(transform, translateY(-6px), webkit moz ms o);
+    }
+}
+
+@include keyframes(headerAnimation) {
+    0% {
+        opacity: 0;
+        @include prefix(transform, translateY(-100%), webkit moz ms o);
+    }
+
+    100% {
+        opacity: 1;
+        @include prefix(transform, translateY(0), webkit moz ms o);
+    }
+}
+
+@include keyframes(zoomOut) {
+    50% {
+        transform: scale(1.1)
+    }
+}

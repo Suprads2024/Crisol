@@ -1,0 +1,91 @@
+/*----------------------
+    Accordions
+------------------------*/
+.accordion {
+    --bs-accordion-border-width: 0;
+    --bs-accordion-border-radius: 0;
+}
+
+.accordion-item {
+    padding: 22px 0;
+    margin-top: -1px;
+    border-top: 2px solid #e7ebef;
+    border-bottom: 2px solid #e7ebef;
+    background-color: var(--color-white);
+
+    &:first-child {
+        border-top: 8px solid var(--color-primary);
+    }
+
+    .accordion-title {
+        font-weight: 700;
+        font-size: 19px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        padding-right: 40px;
+        color: var(--color-secondary);
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+        &:after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            content: "+";
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            color: var(--color-white);
+            background-color: var(--color-secondary);
+        }
+    }
+
+    &.opened {
+
+        .accordion-header:not(.collapsed) {
+            .accordion-title {
+                color: var(--color-primary);
+
+                &:after {
+                    content: "-";
+                    background-color: var(--color-primary);
+                }
+            }
+        }
+    }
+
+    .accordion-body {
+        padding-top: 20px;
+
+        p {
+            font-size: 15px;
+            margin-bottom: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .accordion-item {
+        padding: 10px 0;
+
+        .accordion-title {
+            font-size: 15px;
+        }
+
+        .accordion-body p {
+            font-size: 13px;
+        }
+    }
+}
