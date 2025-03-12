@@ -4066,10 +4066,15 @@ input[type=radio] {
   right: 0;
   width: 100%;
   height: 377px;
-  z-index: 0;
+  z-index: 0; /* Manda la trama al fondo */
   background-image: url(../images/crisol/logos/tramas/crisol_trama-7.png);
   background-position: bottom right;
   background-repeat: no-repeat;
+}
+/* Asegurar que el logo esté por encima */
+.footer .footer-primary img {
+  position: relative;
+  z-index: 2; /* Se coloca por encima de la trama */
 }
 .footer .footer-secondary {
   position: relative;
@@ -4237,6 +4242,15 @@ input[type=radio] {
   }
   .footer .phone-number {
     margin: 10px 0;
+  }
+  .footer .footer-primary:after {
+   opacity: 0.3;
+    background-image: url(../images/crisol/logos/tramas/crisol_trama-7.png);
+   
+  }
+  .footer-primary nav ul li a{
+    margin-top: 10px;
+    padding: 5px;
   }
 }
 /* Mobile Phones */
@@ -5416,6 +5430,7 @@ input[type=radio] {
     flex: 0 0 calc(100% - 60px);
     max-width: calc(100% - 60px);
     padding-bottom: 20px;
+    padding-left: 10px;
   }
   .fancybox-layout3 .fancybox-item .fancybox-title {
     margin-bottom: 7px;
@@ -5819,7 +5834,11 @@ input[type=radio] {
 .certificates-container img:hover {
   transform: translateY(-8px);
 }
-
+@media (max-width:786px){
+  .clients .fw-bold{
+    margin-bottom: 30px !important;
+  }
+}
 /*--------------------
      Blog
 -------------------*/
