@@ -60,7 +60,7 @@
   --color-secondary-rgb: 6, 41, 47;
   --color-white: #ffffff;
   --color-accent: #00226c;
-  --color-dark: #222222;
+  --color-dark: #06292f;
   --color-light: #6d6fb3;
   --bs-gray: #828599;
   --bs-gray-dark: #222222;
@@ -882,7 +882,7 @@ textarea {
    Background & Colors
 --------------------------*/
 .color-gray {
-  color: var(--color-gray-100) !important;
+  color: #e4e0e5 !important;
 }
 
 .color-dark {
@@ -1002,12 +1002,44 @@ a.color-white-hover:hover {
   background-image: linear-gradient(90deg, rgba(6, 70, 178, 0) 0%, rgba(11, 173, 246, 0) 3%, rgb(var(--color-primary-rgb)) 80%);
 }
 
-.bg-overlay-secondary-gradient:before {
-  opacity: 0.95;
-  background-color: var(--color-secondary);
-  background-image: linear-gradient(90deg, rgba(37, 55, 69, 0) 0%, rgba(0, 38, 120, 0.04) 3%, rgb(var(--color-secondary-rgb)) 80%);
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* Asegura que el SVG esté arriba */
 }
 
+
+.bg-overlay-secondary-gradient:before {
+  opacity: 0.95;
+  background-color:#e4e0e5;
+ 
+}
+.bg-overlay-secondary-gradient2 {
+  position: relative; /* Permite posicionar elementos hijos */
+}
+
+.bg-overlay-secondary-gradient2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark); /* Color al 100% */
+  background-image: url(../images/crisol/logos/tramas/crisol_trama-4.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0; /* Se queda al fondo */
+}
+
+.bg-overlay-secondary-gradient2 .container {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté encima */
+  color: white; /* Asegura que el texto sea visible */
+}
 .bg-gray-gradient {
   background-image: linear-gradient(90deg, rgba(6, 70, 178, 0) 0%, rgba(11, 173, 246, 0) 3%, rgb(246, 247, 248) 80%);
 }
@@ -1148,7 +1180,7 @@ h6 {
   color: #f0f1f4;
 }
 .heading-light .heading-title {
-  color: var(--color-white);
+  color: #06292F;
 }
 .heading-light .heading-desc {
   color: var(--color-gray-100);
@@ -1472,7 +1504,7 @@ h6 {
 .btn-primary {
   font-family: 'RedHatDisplay-Medium';
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background-color: var(--color-dark);
 }
 .btn-primary .icon-outlined {
   color: var(--color-secondary);
@@ -2503,8 +2535,8 @@ input[type=radio] {
 /* Navbar */
 .navbar {
   padding: 0;
-  height: 100px;
-  max-height: 100px;
+  height: 150px!important;
+  max-height: 120px;
   background-color: var(--color-white);
   /*  dropdown-menu  */
 }
@@ -2904,8 +2936,8 @@ input[type=radio] {
   width: 100%;
   z-index: 1040;
   border-bottom: 0 !important;
-  height: 80px !important;
-  max-height: 80px !important;
+  height: 110px !important;
+  max-height: 110px !important;
   background-color: var(--color-white) !important;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.07);
   animation: headerAnimation 0.8s;
@@ -3894,18 +3926,18 @@ input[type=radio] {
 .banner-layout3 .nice-select .current,
 .banner-layout3 .checkbox-controls .custom-checkbox label {
   
-  color: var(--color-white);
+  color: #06292f;
 }
 .banner-layout3 .form-control {
   height: 68px;
-  border-color: #e4e0e5;
+  border-color: #06292f;
   background-color: transparent;
 }
 .banner-layout3 .form-control::-webkit-input-placeholder {
-  color: var(--color-white);
+  color: #06292f;
 }
 .banner-layout3 .form-control:-moz-placeholder {
-  color: var(--color-white);
+  color: #06292f;
 }
 .banner-layout3 .form-control::-moz-placeholder {
   color: var(--color-white);
@@ -4057,7 +4089,7 @@ input[type=radio] {
 .footer .footer-primary {
   position: relative;
   padding: 123px 0 100px;
-  background-color: #39beac;
+  background-color: var(--color-dark);
 }
 .footer .footer-primary:after {
   content: "";
@@ -4067,7 +4099,7 @@ input[type=radio] {
   width: 100%;
   height: 377px;
   z-index: 0; /* Manda la trama al fondo */
-  background-image: url(../images/crisol/logos/tramas/crisol_trama-7.png);
+ 
   background-position: bottom right;
   background-repeat: no-repeat;
 }
@@ -4088,7 +4120,7 @@ input[type=radio] {
   left: 50px;
   right: 50px;
   height: 5px;
-  background-color: var(--color-primary);
+  background-color: var(--color-dark);
 }
 .footer [class*=footer-widget] {
   position: relative;
@@ -4304,12 +4336,13 @@ input[type=radio] {
     Call to Action
 --------------------------*/
 .cta-title {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 15px;
+  color: #e4e0e5!important;
 }
 
 .cta-desc {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .cta-banner {
@@ -4334,6 +4367,7 @@ input[type=radio] {
   padding-top: 50px; /* Reduce el espacio superior */
   padding-bottom: 20px; /* Mantiene algo de espacio abajo */
 }
+
 .cta-layout1,
 .cta-layout2 {
   padding: 50px 0;
@@ -8184,7 +8218,7 @@ input[type=radio] {
   padding: 30px 20px 20px;
 }
 .cart-table .cart-product-action td .form-control {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   width: 250px;
   height: 42px;
