@@ -1028,10 +1028,11 @@ a.color-white-hover:hover {
   width: 100%;
   height: 100%;
   background-color: var(--color-dark); /* Color al 100% */
-  background-image: url(../images/crisol/logos/tramas/crisol_trama-4.png);
+
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: contain;
+ 
   z-index: 0; /* Se queda al fondo */
 }
 
@@ -1055,7 +1056,7 @@ a.color-white-hover:hover {
   opacity: 0.2;
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-image: url(../images/crisol/logos/tramas/crisol_trama-8.png);
+  background-image: url(../images/crisol/logos/tramas/crisol_trama-9_trama-4\ copia.png);
 }
 
 
@@ -1157,7 +1158,7 @@ h6 {
 
 .heading-title {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: -20px;
 }
 .heading-title .underlined-text {
   border-bottom: 4px solid var(--color-primary);
@@ -1517,7 +1518,7 @@ h6 {
   background-color: var(--color-primary);
 }
 .btn-primary:hover {
-  background-color:#06292F!important;
+  background-color:var(--color-primary)!important;
   color: var(--color-white);
 }
 .btn-primary:hover .icon-outlined {
@@ -3930,6 +3931,7 @@ input[type=radio] {
 }
 .banner-layout3 .form-control {
   height: 68px;
+  letter-spacing: 1px;
   border-color: #06292f;
   background-color: transparent;
 }
@@ -4099,9 +4101,10 @@ input[type=radio] {
   width: 100%;
   height: 377px;
   z-index: 0; /* Manda la trama al fondo */
- 
+  background-image: url(../images/crisol/logos/tramas/crisol_trama-4.png);
   background-position: bottom right;
   background-repeat: no-repeat;
+  opacity: 0.25;
 }
 /* Asegurar que el logo esté por encima */
 .footer .footer-primary img {
@@ -4246,7 +4249,7 @@ input[type=radio] {
 }
 
 .footer-primary nav ul li a:hover {
-  color: var(--color-secondary); /* Amarillo al pasar el mouse (puedes cambiarlo) */
+  color: var(--color-primary); /* Amarillo al pasar el mouse (puedes cambiarlo) */
 }
 
 /* Mobile Phones and tablets */
@@ -4277,7 +4280,7 @@ input[type=radio] {
   }
   .footer .footer-primary:after {
    opacity: 0.3;
-    background-image: url(../images/crisol/logos/tramas/crisol_trama-7.png);
+    
    
   }
   .footer-primary nav ul li a{
@@ -5834,14 +5837,17 @@ input[type=radio] {
 }
 .client img {
 
-
+  filter: grayscale(100%); /* Hace la imagen en blanco y negro */
 
   position: relative;
   z-index: 11; /* Hace que cada logo sea interactivo */
   pointer-events: auto; /* Permite que el mouse los detecte */
-  padding: 0 15px;
+  padding: 0 50px;
 
   transition: all 0.3s ease;
+}.client img:hover,
+.client img:active { 
+  filter: grayscale(0%); /* Vuelve a mostrar el color original al pasar el mouse o tocar */
 }
 .client:hover img {
   opacity: 1;
@@ -8371,6 +8377,15 @@ input[type=radio] {
 .work-process .slick-slide:not(.slick-active) {
   opacity: 0;
   visibility: hidden;
+}
+.team-name{
+  margin-top: 10px;
+  margin-bottom: -5px;
+  font-size: 20px;
+}
+.team-img {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra suave y difuminada */
+  border-radius: 20px; /* Opcional: Bordes redondeados si querés un efecto más limpio */
 }
 
 @media (min-width: 1400px) {
