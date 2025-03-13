@@ -4477,11 +4477,19 @@ input[type=radio] {
     padding: 20px;
     margin: 20px 0;
   }
+
+  .cta-title{
+    font-size: 25px;
+  }
+
+  .cta-desc{
+    font-size: 17px;
+  }
   .cta-layout3 .cta-title {
     margin-bottom: 5px;
   }
   .cta-layout3 .cta-desc {
-    font-size: 15px;
+   
     margin-bottom: 10px;
   }
   .cta-layout3 .cta-icon {
@@ -8387,7 +8395,7 @@ input[type=radio] {
   font-size: 20px;
 }
 .team-img {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra suave y difuminada */
+
   border-radius: 20px; /* Opcional: Bordes redondeados si querés un efecto más limpio */
 }
 
