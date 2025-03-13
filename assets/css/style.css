@@ -3854,6 +3854,9 @@ input[type=radio] {
 .list-unstyled .banner-list{
   font-family: 'RedHatDisplay-Medium';
 }
+.list-unstyled li {
+  margin-bottom: 8px;
+}
 .banner-layout1 .banner-img,
 .banner-layout2 .banner-img {
   position: relative;
