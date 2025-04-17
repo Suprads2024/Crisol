@@ -2966,6 +2966,10 @@ input[type=radio] {
 .is-sticky .logo-dark {
   display: inline-block;
 }
+
+.logo-mobile {
+  display: none;
+}
 .is-sticky .navbar-nav {
   margin-top: 0 !important;
 }
@@ -3421,7 +3425,9 @@ input[type=radio] {
 /* Mobile and Tablets */
 @media (max-width: 991px) {
   .navbar-brand img {
-    max-height: 40px; /* Ajusta el tamaño del logo */
+    margin-top: -15px;
+    max-height: 150px; /* Ajusta el tamaño del logo */
+    margin-left: -30px;
   }
   .navbar .navbar-toggler {
     position: absolute;
@@ -3598,10 +3604,14 @@ input[type=radio] {
   .header-transparent .navbar {
     background-color: var(--color-white);
   }
-  .header .logo-dark,
-  .header-transparent .logo-dark {
+  .header .logo-mobile,
+  .header-transparent .logo-mobile {
     display: inline-block;
   }
+
+ .logo-dark{
+  display: none;
+ }
   .header .logo-light,
   .header-transparent .logo-light {
     display: none;
