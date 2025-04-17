@@ -182,8 +182,8 @@ a:hover {
 
 section {
   position: relative;
-  padding-top: 110px;
-  padding-bottom: 110px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 img {
@@ -396,7 +396,7 @@ textarea {
 }
 
 .mb-30 {
-  margin-bottom: 30px !important;
+  margin-bottom: 10px !important;
 }
 
 .mb-40 {
@@ -621,7 +621,7 @@ textarea {
 }
 
 .pb-220 {
-  padding-bottom: 220px !important;
+  padding-bottom: 130px !important;
 }
 
 /* padding Right */
@@ -1158,7 +1158,7 @@ h6 {
 
 .heading-title {
   font-size: 36px;
-  margin-bottom: -20px;
+  margin-bottom: -50px;
 }
 .heading-title .underlined-text {
   border-bottom: 4px solid var(--color-primary);
@@ -4703,7 +4703,7 @@ input[type=radio] {
 
 @media (min-width: 1200px) {
   .slider .slide-title {
-    font-size: 75px;
+    font-size: 55px;
     line-height: 1.1;
     font-weight: 700;
   }
@@ -5280,8 +5280,8 @@ input[type=radio] {
   flex: 0 0 calc(50% - 15px);
   max-width: calc(50% - 15px);
 }
-.fancybox-layout3 .fancybox-item:not(:last-of-type) .fancybox-body {
-  border-bottom: 1px solid var(--color-gray-200);
+.fancybox-layout3 .fancybox-body {
+  border-bottom: 1px solid var(--color-gray-200)!important;
 }
 .fancybox-layout3 .fancybox-item .fancybox-icon {
   padding-top: 5px;
@@ -5404,6 +5404,7 @@ input[type=radio] {
 }
 @media (min-width: 1400px) {
   .fancybox-layout3 .heading-desc {
+   
     font-size: 17px;
     padding-right: 70px;
   }
@@ -5440,7 +5441,7 @@ input[type=radio] {
   .fancybox-layout3 .fancybox-item .fancybox-body {
     flex: 0 0 calc(100% - 100px);
     max-width: calc(100% - 100px);
-    padding-bottom: 42px;
+   
   }
   .fancybox-layout3 .fancybox-item .fancybox-icon {
     flex: 0 0 100px;
@@ -5542,6 +5543,39 @@ input[type=radio] {
     font-size: 40px;
   }
 }
+
+.extra-text {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: scaleY(0.95);
+  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.extra-text.open {
+  font-family: 'RedHatDisplay-Medium';
+  max-height: 500px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.toggle-btn {
+  font-family: 'RedHatDisplay-Medium';
+  background: none;
+  border: none;
+  color: #39BEAC;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  color: #00657F;
+}
+
+
 /*--------------------
      Team
 ---------------------*/
