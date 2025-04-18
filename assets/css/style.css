@@ -1244,7 +1244,7 @@ h6 {
 /* Mobile Phones and tablets  */
 @media (min-width: 320px) and (max-width: 767px) {
   .heading-title {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
   }
   .heading-desc,
@@ -4019,7 +4019,7 @@ input[type=radio] {
 }
 
 .banner-layout6 .heading-title {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 27px;
 }
 .banner-layout6 .heading-desc {
@@ -4078,6 +4078,9 @@ input[type=radio] {
   }
   .banner-layout6 .video-banner {
     margin-bottom: -40px;
+  }
+  .banner-layout3 .form-control {
+    height: 45px;
   }
 }
 @media (min-width: 992px) {
@@ -4508,7 +4511,7 @@ input[type=radio] {
   }
 
   .cta-title{
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .cta-desc{
@@ -4853,7 +4856,7 @@ input[type=radio] {
 /* Extra Small Devices */
 @media (min-width: 320px) and (max-width: 575px) {
   .slider .slide-title {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 10px;
     text-align: center;
   }
@@ -8592,14 +8595,15 @@ input[type=radio] {
 
   /* Reducir tamaño de las imágenes en móviles */
   .team-img img {
-    width: 250px; /* Ajusta el tamaño según necesites */
+    width: 150px; /* Ajusta el tamaño según necesites */
     height: auto;
   }
 
   /* Hacer el nombre más pequeño */
   .team-name {
     margin-top: 10px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    
     font-size: 16px; /* Antes era más grande, ahora es más compacto */
   }
 
