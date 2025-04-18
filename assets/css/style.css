@@ -4800,6 +4800,8 @@ input[type=radio] {
     margin-bottom: 10px;
   }
 }
+
+
 /* Mobile Phones and tablets */
 @media (min-width: 320px) and (max-width: 767px) {
   .header-transparent + .slider {
@@ -4811,10 +4813,11 @@ input[type=radio] {
     height:85vh;
   }
   .slider .slide-desc {
+   
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 20px;
-    text-align: c;
+    text-align: center!important;
   }
   .slider .slick-arrow:before {
     font-size: 25px;
@@ -4834,11 +4837,25 @@ input[type=radio] {
     margin-bottom: 10px;
   }
 }
+
+@media (max-width: 768px) {
+  .slide-content .d-flex {
+    justify-content: center !important; /* Centra horizontalmente los botones */
+    text-align: center;
+    gap: 15px;
+  }
+
+  .slide-content .btn {
+    margin-right: 0 !important; /* Elimina separación a la derecha */
+    margin-bottom: 10px;
+  }
+}
 /* Extra Small Devices */
 @media (min-width: 320px) and (max-width: 575px) {
   .slider .slide-title {
     font-size: 30px;
     margin-bottom: 10px;
+    text-align: center;
   }
   .slider .btn {
     font-family: 'RedHatDisplay-Bold';
