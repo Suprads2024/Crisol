@@ -874,7 +874,7 @@ textarea {
 /* Mobile Phones and tablets */
 @media (min-width: 320px) and (max-width: 767px) {
   section {
-    padding-top: 50px;
+    padding-top: 10px;
     padding-bottom: 50px;
   }
 }
@@ -4692,7 +4692,7 @@ input[type=radio] {
   width: 100%;
 }
 .slider .slick-dots li.slick-active button {
-  background-color: var(--color-secondary);
+  background-color: #010711;
 }
 .slider .cta-banner {
   padding: 50px;
@@ -4808,12 +4808,13 @@ input[type=radio] {
   .slider .slide-item {
     min-height: 0;
     padding: 100px 10px;
-    height:75vh;
+    height:85vh;
   }
   .slider .slide-desc {
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 20px;
+    text-align: c;
   }
   .slider .slick-arrow:before {
     font-size: 25px;
@@ -7522,7 +7523,7 @@ input[type=radio] {
     display: none;
   }
   .about-layout2 .about-img {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 /*-----------------------
