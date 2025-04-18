@@ -853,7 +853,7 @@ textarea {
     padding-left: 25px !important;
   }
   .pb-220 {
-    padding-bottom: 110px !important;
+    padding-bottom: 40px !important;
   }
 }
 @media (max-width: 991px) {
@@ -1158,7 +1158,7 @@ h6 {
 
 .heading-title {
   font-size: 36px;
-  margin-bottom: -50px;
+  margin-bottom: -30px;
 }
 .heading-title .underlined-text {
   border-bottom: 4px solid var(--color-primary);
@@ -1592,6 +1592,14 @@ h6 {
   color: var(--color-secondary);
   background-color: var(--color-white);
 }
+.btn-black {
+  color: var(--color-white);
+  background-color: #010711;
+}
+.btn-black:hover {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
 .btn-white:active, .btn-white:focus {
   color: var(--color-secondary);
   border-color: var(--color-white);
@@ -1605,6 +1613,16 @@ h6 {
   color: var(--color-white);
   background-color: transparent;
   border: 2px solid var(--color-white);
+}
+.btn-black.btn-outlined {
+  color: #010711;
+  background-color: transparent;
+  border: 2px solid #010711;
+}
+.btn-black.btn-outlined:hover {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
 }
 .btn-white.btn-outlined:before {
   border-right-color: var(--color-white);
@@ -3425,9 +3443,9 @@ input[type=radio] {
 /* Mobile and Tablets */
 @media (max-width: 991px) {
   .navbar-brand img {
-    margin-top: -15px;
-    max-height: 150px; /* Ajusta el tamaño del logo */
-    margin-left: -30px;
+    margin-left: -20px;
+    max-height: 80px; /* Ajusta el tamaño del logo */
+ 
   }
   .navbar .navbar-toggler {
     position: absolute;
@@ -3610,7 +3628,7 @@ input[type=radio] {
   }
 
  .logo-dark{
-  display: none;
+  display: none!important;
  }
   .header .logo-light,
   .header-transparent .logo-light {
@@ -4618,7 +4636,7 @@ input[type=radio] {
   height: calc(100vh - 160px);
 }
 .slider .slide-item.bg-overlay:before {
-  background-color: rgba(1, 29, 89, 0.15);
+ 
 }
 .slider .slide-item.bg-overlay:after {
   content: "";
@@ -4629,7 +4647,7 @@ input[type=radio] {
   bottom: 0;
   z-index: -1;
   opacity: 0.5;
-  background: linear-gradient(to bottom, rgba(0, 34, 108, 0.99) 0%, rgba(179, 189, 211, 0.1) 70%, rgba(255, 255, 255, 0) 100%);
+ 
 }
 .slider .slide-subtitle {
   display: inline-block;
@@ -4649,7 +4667,7 @@ input[type=radio] {
   margin-bottom: 25px;
 }
 .slider .slide-desc {
-  font-family: 'RedHatDisplay-Regular';
+  font-family: 'RedHatDisplay-Medium';
   color: var(--color-gray-100);
   max-width: 600px;
   margin-bottom: 30px;
@@ -4718,8 +4736,8 @@ input[type=radio] {
     font-weight: 700;
   }
   .slider .slide-desc {
-    font-size: 17px;
-    line-height: 1.5;
+    font-size: 22px;
+    line-height: 1.2;
     font-weight: 700;
   }
   .slider .slick-arrow:before {
@@ -5883,27 +5901,22 @@ input[type=radio] {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 60px;
 }
 /* Asegurar que los logos estén por encima y sean interactivos */
 .slick-carousel {
   position: relative;
   z-index: 10; /* Asegura que el carrusel esté por encima de otros elementos */
 }
+
 .client img {
-
-  filter: grayscale(100%); /* Hace la imagen en blanco y negro */
-
-  position: relative;
-  z-index: 11; /* Hace que cada logo sea interactivo */
-  pointer-events: auto; /* Permite que el mouse los detecte */
-  padding: 0 50px;
-
+  max-height: 80px; /* Podés aumentar este valor si querés aún más grande */
+  height: auto;      /* Asegura proporción */
+  width: auto;       /* Asegura que no se deforme */
+  padding: 0 30px;
   transition: all 0.3s ease;
-}.client img:hover,
-.client img:active { 
-  filter: grayscale(0%); /* Vuelve a mostrar el color original al pasar el mouse o tocar */
 }
+
 .client:hover img {
   opacity: 1;
   transform: scale(1.1);
