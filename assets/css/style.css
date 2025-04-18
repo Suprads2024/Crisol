@@ -1589,12 +1589,13 @@ h6 {
 }
 
 .btn-white {
-  color: var(--color-secondary);
+  color: #000;
   background-color: var(--color-white);
 }
 .btn-black {
   color: var(--color-white);
   background-color: #010711;
+  border: 2px solid #010711;
 }
 .btn-black:hover {
   color: var(--color-white);
