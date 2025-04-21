@@ -5443,7 +5443,9 @@ input[type=radio] {
 .fancybox-carousel .fancybox-item .fancybox-desc {
   min-height: 100px;
 }
-
+.heading-desc{
+  margin-bottom: 60px!important;
+}
 @media (min-width: 1200px) {
   .fancybox-carousel .carousel-container {
     margin-right: -140px;
