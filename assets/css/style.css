@@ -5968,6 +5968,16 @@ input[type=radio] {
   .clients .fw-bold{
     margin-bottom: 30px !important;
   }
+  .client img {
+    max-height: 150px !important; /* Aumenta el tamaño en mobile */
+    padding: 0 15px; /* Opcional: ajustá el espaciado lateral si es necesario */
+  }
+
+  .client {
+    height: 50px; /* Aumenta el contenedor también */
+  }
+
+
 }
 /*--------------------
      Blog
