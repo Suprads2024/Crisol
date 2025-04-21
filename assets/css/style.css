@@ -4260,7 +4260,15 @@ input[type=radio] {
 .footer .social-icons li:last-of-type {
   margin-right: 0;
 }
+.link-suprads {
+  font-family: 'RedHatDisplay-Bold';
+  color: #7F7CFD;
+  transition: color 0.3s ease;
+}
 
+.link-suprads:hover {
+  color: #000000;
+}
 /* Scroll Top Button */
 #scrollTopBtn {
   color: var(--color-primary);
